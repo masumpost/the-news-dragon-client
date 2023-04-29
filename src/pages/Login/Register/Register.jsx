@@ -32,7 +32,7 @@ const Register = () => {
     }
 
   return (
-    <Container className="w-25 mx-auto">
+    <Container style={{width:'420px'}} className="mx-auto">
       <h4 className="my-4">Please Register</h4>
       <Form onSubmit={handelRegister}>
         <Form.Group className="mb-3" controlId="formBasicName">

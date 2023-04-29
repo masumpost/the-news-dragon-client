@@ -29,7 +29,7 @@ const Login = () => {
     }
 
   return (
-    <Container className="w-25 mx-auto">
+    <Container style={{width:'420px'}} className=" mx-auto">
       <h4 className="my-4">Please Login</h4>
       <Form onSubmit={handelLogin}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
