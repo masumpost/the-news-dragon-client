@@ -8,7 +8,8 @@ import {
   FaRegStar,
   FaStar,
 } from "react-icons/fa";
-import Rating from "react-rating";
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 import { Link } from "react-router-dom";
 
 const NewsCard = ({ news }) => {
@@ -48,13 +49,8 @@ const NewsCard = ({ news }) => {
       <Card.Footer className="text-muted d-flex p-3">
         <div className="flex-grow-1">
          <div className=" d-flex align-items-center gap-2">
-         <Rating
-            placeholderRating={rating.number}
-            emptySymbol={<FaRegStar></FaRegStar>}
-            placeholderSymbol={<FaStar className="text-warning"></FaStar>}
-            fullSymbol={<FaStar></FaStar>}
-          ></Rating>
-          <small>{rating.number}</small>
+         <Rating style={{ maxWidth: 150 }} value={Math.round(rating?.number)} readOnly />
+          <small className="ms-2">{rating?.number}</small>
          </div>
         </div>
         <div className="gap-2">
